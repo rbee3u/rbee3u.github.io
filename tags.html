@@ -1,6 +1,8 @@
 ---
 layout: page
-title: 'Tag Index'
+title: IT夜航船
+subtitle: 天下学问，惟夜航船中最难对付
+use-site-title: true
 ---
 
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
@@ -13,7 +15,7 @@ title: 'Tag Index'
 {%- assign tags_list = site_tags | split:',' | sort -%}
 
 {%- for tag in tags_list -%}
-    <a href="#{{- tag -}}" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})</a>
+    <a href="#{{- tag -}}" class="btn tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;{{- tag -}}&nbsp;({{site.tags[tag].size}})</a>
 {%- endfor -%}
 
 <div id="full-tags-list">
